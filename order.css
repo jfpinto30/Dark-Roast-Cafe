@@ -1,0 +1,599 @@
+@font-face {
+    font-family: Nunito;
+    src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Spartan&display=swap');
+}
+
+@font-face {
+    font-family: Spartan;
+    src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Spartan&display=swap');
+}
+
+
+/* BODY */
+
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	
+	background-color: #ffffff;
+	color: #2a2a2a;
+  overflow-x: hidden;
+}
+
+
+
+/* NAVIGATION */
+
+
+
+nav {
+  position: fixed;
+  top: 1;
+  left: 1;
+  width: 240px;
+  height: 100vh;
+  background-color: rgb(94, 154, 148);
+  color: #ffffff;
+  
+  font-family: 'Nunito', sans-serif;;
+  font-size: 24px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5px 32px 5px 32px;
+}
+
+
+
+
+
+
+
+/* MAIN */
+
+
+
+
+
+main {
+    position:relative;
+    z-index: index 1;
+    background-color: #ffffff;
+    min-height: 101vh;
+    transition: transform 0.5s;
+    
+}
+
+
+main.open {
+    transform: translate(240px, 0);
+}
+
+
+
+
+
+
+
+
+/* TOGGLE */
+
+
+
+
+
+a.toggle-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    text-decoration: none;
+    color: #2a2a2a;
+  }
+  
+  a.toggle-nav img {
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+  }
+
+
+  /* ! TOP SECTION ! */
+
+
+
+  section {
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+
+
+
+
+/* MAIN TITLE */
+
+
+
+
+
+.machine-heading2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 50px;
+  
+}
+
+
+.barista-container {
+  padding:20px;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+/* MAIN IMAGES */
+
+
+.machine {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+.coffee-machine {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+
+
+#cup {
+  background-image: url('./Icons/coffee-cup.svg');
+  background-repeat:no-repeat;
+  position: absolute;
+  top: 255px;
+  left: 285px;
+  transition-property: bottom;
+  transition-duration: 1s;
+  width: 95px;
+  height: 80px;
+  padding: auto;
+  margin:auto;
+}
+
+
+
+#coffee-liquid {
+  background-image: url('./Icons/coffee\ liquid.svg');
+  background-repeat:no-repeat;
+  position:absolute;
+  left:309px;
+  margin-top:275px;
+  transition-property: top;
+  transition-duration: 1s;
+  width: 39px;
+  height: 110px;
+}
+
+
+
+#handle {
+  position: absolute;
+  background-repeat: no-repeat;
+  top:299px;
+  left:107px;
+ 
+}
+
+
+
+
+/* VAPOUR ANIMATION */
+
+
+.vapour{
+position: relative;
+display: flex;
+z-index: 1;
+bottom: 220px;
+padding: 0 20px;
+justify-content: center;
+
+}
+
+
+.vapour span{
+position: relative;
+bottom: 50px;
+display: block;
+margin: 0 2px 50px;
+min-width: 5px;
+height: 90px;
+background: #ffffff;
+border-radius: 50%;
+animation: animate 5s linear infinite;
+opacity: 0;
+filter: blur(10px);
+animation-delay: calc(var(--v) * -0.5s);
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) scaleX(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity:0;
+  }
+  100% {
+    transform: translateY(-300px) scaleX(10);
+  }
+}
+
+
+
+
+
+
+/* ! SECTION 2 ! */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COFFEE BAGS CONTAINER LEFT SIDE */
+
+
+
+
+
+.list-container {
+display:block;
+  margin:auto;
+  padding:auto;
+    width:300px;
+    height: 100vh; 
+    flex-wrap: wrap;
+    
+}
+
+ul{
+  
+  list-style: none;
+  padding:5px;
+  margin:5px;
+  width: 250px;
+  height: 100vh;
+
+}
+
+li{
+  
+  padding:10px;
+  
+}
+
+
+
+
+
+.coffeeBag1  {
+  
+  padding: 10px;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center; 
+  text-decoration: none;
+  width: 330px;
+  
+}
+
+
+.coffeeBag1 p {
+  
+  position: relative;
+  display: inline;
+  bottom: 25px;
+
+}
+
+
+.icon {
+
+  background-image: url('./Icons/coffee\ bag.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+
+  width: 100px;
+  height: 80px;
+}
+
+.iconOpen {
+  
+  background-image: url('./Icons/coffee\ bag\ open.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+  
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center; 
+
+  width: 100px;
+  height: 80px;
+}
+
+
+
+
+
+
+/* COFFE BAGS SHAKE */
+
+.icon:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  
+}
+
+
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+
+
+/* COFFEE BAGS CONTAINER RIGHT SIDE */
+
+
+
+
+.list-container2 {
+  
+  margin:auto;
+  padding:auto;
+    width:300px;
+    height: 100vh; 
+flex-wrap: wrap;
+    
+}
+
+
+
+.coffeeBag2  {
+  padding: 10px;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center; 
+  text-decoration: none;
+  width: 280px;
+
+ 
+}
+
+
+.coffeeBag2 p {
+  
+  position: relative;
+  display: inline;
+  bottom: 25px;
+
+}
+
+
+
+
+
+
+
+/*  ATICLE SECTION */
+
+
+
+
+
+article {
+  
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+
+
+
+.content-container {
+display: flex;
+justify-content: center;
+align-content: center;
+flex-direction: column;
+width: 600px;
+height: 100vh;
+
+}
+
+
+
+.content {
+
+padding:10px;
+}
+
+
+
+/*  SHOPPING CART  */
+
+
+.cart-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cart-button {
+background-color: #fff;
+color: #375A57;
+padding: 15px;
+border-radius: 10px;
+font-weight: 900;
+width: 100%;
+cursor: pointer;
+display: flex;
+align-items: center;
+}
+
+.cart-content {
+background-color: #fff;
+color: #375A57;
+padding: 0 10px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+width: 300px;
+box-shadow: 0 -20px 100px 7px #364b835e;
+z-index: -1;
+}
+
+.cart-content_item-cart {
+  display: flex;
+}
+
+.item-card_product-image {
+  width: 80px;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.item-card_data-product {
+  display: flex;
+  flex-direction: column;
+  margin:15px 0;
+}
+
+.data-product_title {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.data-product_price-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+
+
+  /* FONT TYPE */
+
+
+
+
+  h1 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: .02em;
+  text-align: center;
+  color: rgb(245, 103, 51);
+  
+  
+  }
+  
+  h2 {
+    font-family: 'Spartan', sans-serif;
+  font-weight: 120;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: .03em;
+  text-align: center;
+  color: #375A57;
+  
+  }
+  
+  
+  p {
+    font-family: 'Spartan', sans-serif;
+    font-weight:120;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: rgb(145, 143, 143);
+  
+    padding: 7px;
+  }
+
+
+
+
+
+  /* FOOTER */
